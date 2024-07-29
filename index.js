@@ -3,8 +3,8 @@ const httpServer = express();
 const bodyParser = require('body-parser');
 const { initialize_mongo_connectivity } = require('./database/connection');
 
-require('dotenv').config();
 httpServer.use(bodyParser.json());
+require('dotenv').config();
 
 httpServer.use("/mentors", require('./modules/mentors/mentors.controller'))
 
