@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const URI = process.env.NODE_ENV === "DEVELOPMENT" ? "mongodb://localhost:27017/" : process.env.PROD_DB_URL ;
+const URI = process.env.NODE_ENV === "DEVELOPMENT" ? "mongodb://localhost:27017/" : process.env.PROD_ENV_URL ;
 
 async function initialize_mongo_connectivity(){
     console.log("Mongo db connection initialized");
